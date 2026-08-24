@@ -1,0 +1,25 @@
+# Clean validation environment: CPython 3.12.3 on Windows 11, 2026-07-20.
+# Direct project dependencies and validation tools only; transitive versions
+# remain resolved by their upstream package constraints.
+branca==0.8.2
+duckdb==1.5.4
+folium==0.20.0
+geopandas==1.1.4
+matplotlib==3.11.1
+momepy==0.11.0
+numpy==2.5.1
+osmnx==2.1.0
+pandas==2.3.3
+Pillow==11.3.0
+psutil==7.2.2
+pyarrow==21.0.0
+pyogrio==0.13.0
+pyproj==3.7.2
+pytest==9.1.1
+PyYAML==6.0.3
+rasterio==1.5.0
+requests==2.34.2
+shapely==2.1.2
+streamlit==1.59.2
+streamlit-folium==0.27.2
+mkdocs==1.6.1

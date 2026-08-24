@@ -1,0 +1,99 @@
+project:
+  run_name: example_urban_area_100m
+  output_dir: 04_outputs/example_urban_area_100m
+  overwrite_existing_run: true
+
+aoi:
+  mode: bbox
+  name: example_urban_area
+  crs: EPSG:4326
+  bounds:
+    minx: 4.477
+    miny: 51.918
+    maxx: 4.483
+    maxy: 51.922
+
+crs_strategy:
+  processing_mode: single_crs
+  context_buffer_m: 100
+
+data_source:
+  type: overture
+  release: 2026-06-17.0
+  provider: aws
+  exclude_underground: true
+
+preprocessing:
+  target_crs: auto_utm
+  clean_geometries: true
+  clip_to_aoi: true
+
+aggregation:
+  method: regular_grid
+  cell_size_m: 100
+
+indicators:
+  gsi: true
+  far_fsi: true
+  built_volume_density: true
+  neighbor_distance: true
+  height_to_distance_ratio: false
+
+indicator_parameters:
+  min_distance_for_ratio_m: 0.5
+  boundary_distance_threshold_m: 50.0
+  high_ratio_threshold: 10.0
+
+height_enrichment:
+  enabled: true
+  source: gba_lod1_parquet
+  mode: fill_missing_only
+  replace_existing_height: false
+  cache_dir: 04_outputs/_cache/gba_lod1_parquet
+  base_url: https://data.source.coop/tge-labs/globalbuildingatlas-lod1
+  min_overlap_share: 0.2
+  min_valid_height_m: 2.0
+  bbox_buffer_deg: 0.002
+  max_download_size_mb: 2000
+  save_enriched_buildings: true
+  save_gba_subset: false
+  save_matches: false
+
+street_context:
+  enabled: true
+  source: osmnx
+  network_type: drive
+  distance_m: 10
+  tick_length_m: 60
+  use_existing_if_available: true
+  save_streets: true
+  save_street_profiles: true
+  save_building_street_assignment: true
+
+outputs:
+  mode: compact
+  save_raw_buildings: true
+  save_processed_buildings: true
+  save_grid: true
+  save_indicator_grid: true
+  save_neighbor_diagnostics: true
+  save_tables: true
+  save_reports: true
+  save_gsi_sanity_diagnostics: true
+
+visualization:
+  save_static_maps: false
+  figure_dpi: 200
+  figure_format: png
+
+cache:
+  enabled: true
+  use_existing_raw_buildings: true
+  use_existing_cleaned_buildings: true
+  use_existing_enriched_buildings: true
+  use_existing_neighbor_context: true
+  use_existing_street_context: true
+  use_existing_street_network: true
+  use_existing_street_profiles: true
+  force_refresh: false
+  require_compatible_manifest: true

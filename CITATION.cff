@@ -1,0 +1,10 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it using the metadata below."
+title: "Urban Density Workflow"
+version: "0.3.1"
+date-released: 2026-08-17
+type: software
+authors:
+  - family-names: "Kiseleva"
+    given-names: "Agata"
+repository-code: "https://github.com/AgataKisel/urban-density-workflow"

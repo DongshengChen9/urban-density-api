@@ -1,0 +1,68 @@
+# Python and test caches
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+*.egg-info/
+build/
+dist/
+
+# Virtual environments and local environment files
+.venv/
+venv/
+env/
+.env
+.env.*
+!.env.example
+
+# Credentials and local secrets
+*.pem
+*.key
+credentials.*
+secrets.*
+
+# Generated workflow outputs and caches
+04_outputs/
+outputs/
+cache/
+03_code/cache/
+03_code/config/generated/
+logs/
+*.log
+
+# Generated geospatial and tabular artifacts
+*.gpkg
+*.parquet
+*.geoparquet
+*.geojson
+*.fgb
+*.tif
+*.tiff
+*.mbtiles
+*.pmtiles
+
+# Generated maps and standalone web output
+webmap/
+site/
+*.html
+*.png
+
+# Notebook and editor artifacts
+.ipynb_checkpoints/
+*.ipynb
+.vscode/
+.idea/
+*.code-workspace
+
+# Operating-system files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Local run configuration overrides
+config.local.yaml
+config.local.yml
+*.local.yaml
+*.local.yml
