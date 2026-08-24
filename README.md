@@ -230,7 +230,8 @@ The project is released under the **MIT License**. Existing authorship, citation
 
 See:
 
-- `ATTRIBUTION.md`
-- `THIRD_PARTY_NOTICES.md`
-- `CITATION.cff`
-- `LICENSE`
+- [ATTRIBUTION.md](./ATTRIBUTION.md)
+- [THIRD_PARTY_NOTICES.md](./THIRD_PARTY_NOTICES.md)
+- [CITATION.cff](./CITATION.md)
+- [LICENSE](./LICENSE)
+
