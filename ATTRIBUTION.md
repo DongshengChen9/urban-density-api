@@ -4,8 +4,7 @@ This repository contains software only. It does not redistribute building,
 street, basemap, height-enrichment, or generated workflow datasets.
 
 The REST API directory is a later software-layer contribution that wraps the
-existing Urban Density Workflow. It does not change the original scientific
-authorship, license, citation metadata, or upstream data attribution duties.
+existing Urban Density Workflow.
 
 ## Overture Maps Buildings
 
