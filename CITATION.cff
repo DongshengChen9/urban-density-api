@@ -1,10 +1,39 @@
+```yaml
 cff-version: 1.2.0
 message: "If you use this software, please cite it using the metadata below."
 title: "Urban Density Workflow"
-version: "0.3.1"
-date-released: 2026-08-17
+version: "0.4.0"
+date-released: 2026-08-24
 type: software
+
 authors:
   - family-names: "Kiseleva"
     given-names: "Agata"
-repository-code: "https://github.com/AgataKisel/urban-density-workflow"
+
+  - family-names: "Chen"
+    given-names: "Dongsheng"
+
+repository-code: "https://github.com/DongshengChen9/urban-density-api"
+
+license: "MIT"
+keywords:
+  - urban density
+  - urban morphology
+  - geospatial analysis
+  - GeoAI
+  - FastAPI
+  - Overture Maps
+  - Global Building Atlas
+  - urban planning
+  - 3D city analysis
+
+references:
+  - type: software
+    authors:
+      - family-names: "Kiseleva"
+        given-names: "Agata"
+    title: "Urban Density Workflow"
+    version: "0.3.1"
+    date-released: 2026-08-17
+    repository-code: "https://github.com/AgataKisel/urban-density-workflow"
+```
